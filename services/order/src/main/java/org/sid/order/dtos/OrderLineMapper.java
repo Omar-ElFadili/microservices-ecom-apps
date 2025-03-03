@@ -24,5 +24,4 @@ public class OrderLineMapper {
         orderLineResponse.setQuantity(orderLine.getQuantity());
         return orderLineResponse;
     }
-
 }
