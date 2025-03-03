@@ -1,0 +1,51 @@
+<!-- order-confirmation.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            text-align: left;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 5px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Order Confirmation</h2>
+    <p>Dear <span th:text="${customerName}"></span>,</p>
+    <p>Thank you for your order! Here are the details:</p>
+    <p>Order Reference: <strong><span th:text="${orderReference}"></span></strong></p>
+    <p>Total Amount: <strong><span th:text="${totalAmount}"></span></strong></p>
+    <h3>Products:</h3>
+    <ul>
+        <li th:each="product : ${products}">
+            <span th:text="${product.name}"></span> - <span th:text="${product.price}"></span>
+        </li>
+    </ul>
+    <p>We appreciate your business!</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!-- payment-confirmation.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Payment Successfully Processed</h2>
+    <p>Dear <span th:text="${customerName}"></span>,</p>
+    <p>Your payment of <strong><span th:text="${amount}"></span></strong> has been successfully processed.</p>
+    <p>Order Reference: <strong><span th:text="${orderReference}"></span></strong></p>
+    <p>Thank you for your purchase!</p>
+</div>
+</body>
+</html>
